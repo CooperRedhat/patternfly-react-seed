@@ -129,7 +129,7 @@ const cardData = {
   ]
 }
 
-const Dashboard: React.FunctionComponent = () => {
+const Aggregate: React.FunctionComponent = () => {
   const renderContent = (content, layout) => {
     if (layout === 'icon') {
       return content[0].icon
@@ -171,8 +171,6 @@ const Dashboard: React.FunctionComponent = () => {
     } 
   }
   return (
-    <>
-    <PageSection>
       <Grid hasGutter>
         {Object.keys(cardData).map(cardGroup => {
           let galleryWidth, cardAlign, titleAlign;
@@ -199,12 +197,7 @@ const Dashboard: React.FunctionComponent = () => {
           )
         })}
         </Grid>
-      </PageSection>
-      <PageSection>
-        status
-      </PageSection>
-      </>
   )
 }
 
-export { Dashboard };
+export { Aggregate };
